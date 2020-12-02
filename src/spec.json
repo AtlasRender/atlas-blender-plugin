@@ -1,0 +1,12 @@
+[
+  {
+    "type": "string",
+    "name": "pathToBlender",
+    "label": "Path to blender"
+  },
+  {
+    "type": "string",
+    "name": "pathToBlenderScene",
+    "label": "Path to blender scene"
+  }
+]
