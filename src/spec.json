@@ -8,5 +8,20 @@
     "type": "string",
     "name": "pathToBlenderScene",
     "label": "Path to blender scene"
+  },
+  {
+    "type": "integer",
+    "name": "samples",
+    "label": "Samples"
+  },
+  {
+    "type": "integer",
+    "name": "resolutionX",
+    "label": "Resolution X"
+  },
+  {
+    "type": "integer",
+    "name": "resolutionY",
+    "label": "Resolution Y"
   }
 ]
