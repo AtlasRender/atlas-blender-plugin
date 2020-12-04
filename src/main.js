@@ -1,39 +1,27 @@
 const {exec} = require("child_process");
+const fs = require("fs");
+const os = require("os");
 
 let timeAll = 0;
 console.log(`plugin begin render task for frame ${frame}`);
 
-const script = `from datetime import datetime
-from bpy.app import handlers
-import bpy.types
-import bpy
-import os
-import json
-import sys
-import time
+const script = "from datetime import datetime\nfrom bpy.app import handlers\nimport bpy.types\n" +
+    "import bpy\nimport os\nimport json\nimport sys\nimport time\n\n\nprint(bpy.context.scene.cycles.samples)\n" +
+    "\nFRAME_START_TIME = None\nRENDER_START_TIME = None\noutputDir = bpy.context.scene.render.filepath\n" +
+    "\nargv = sys.argv\nargv = argv[argv.index(\"--\") + 1:]\nframe = int(argv[0])\nbpy.context.scene.cycles.samples = int(argv[1])\n" +
+    "bpy.context.scene.render.resolution_x = int(argv[2])\nbpy.context.scene.render.resolution_y = int(argv[3])\nprint(argv[1])\n" +
+    "print(\"asd\")\nbpy.context.scene.render.filepath = \"/Projects/\" + str(argv[4]).zfill(4)\nbpy.context.scene.frame_set(int(frame))\n" +
+    "bpy.ops.render.render(write_still=True, use_viewport=True)"
 
+const scriptName = "Atlas-slave-temp" + Math.floor(Math.random() * (110000 - 100000) + 100000) + `.py`;
 
-print(bpy.context.scene.cycles.samples)
+console.log(scriptName);
 
-FRAME_START_TIME = None
-RENDER_START_TIME = None
-outputDir = bpy.context.scene.render.filepath
-
-argv = sys.argv
-argv = argv[argv.index("--") + 1:]
-frame = int(argv[0])
-bpy.context.scene.cycles.samples = int(argv[1])
-bpy.context.scene.render.resolution_x = int(argv[2])
-bpy.context.scene.render.resolution_y = int(argv[3])
-print(argv[1])
-print("asd")
-bpy.context.scene.render.filepath = "/Projects/" + str(argv[4]).zfill(4)
-bpy.context.scene.frame_set(int(frame))
-bpy.ops.render.render(write_still=True, use_viewport=True)`;
+fs.writeFileSync(os.tmpdir() + `\\` + scriptName, script);
 
 const command = [
     `${pathToBlender.substr(0, 2)} && cd ${pathToBlender.substr(2)} && blender --verbose 4 ${pathToBlenderScene}`,
-    ` --background --python Projects\\script1\\blender_script.py `,
+    ` --background --python ${os.tmpdir() + `\\` + scriptName} `,
     `-- ${+frame} ${+samples} ${+resolutionX} ${+resolutionY} ${+renumbered}`
 ].join("");
 const cp = exec(command,(error, stdout, stderr) => {
@@ -47,6 +35,7 @@ const cp = exec(command,(error, stdout, stderr) => {
         }
         console.log("100%\nfinish render");
         finishJob("done", "render finished!");
+        fs.unlink(os.tmpdir() + `\\` + scriptName, () => {console.log("Script was deleted")});
         // console.log(`stdout: ${stdout}`);
     });
 console.log("Prepare for rendering!");
@@ -72,9 +61,12 @@ cp.stdout.on("data", async (data) => {
             let sec2 = +cols[i].substr(14, 2);
             let ms2 = +cols[i].substr(17, 2);
             let timeNow = (min2 * 60000) + (sec2 * 1000) + ms2;
+            if(timeAll < timeNow){
+                timeAll = timeNow;
+            }
             console.log(`${(100 - (timeNow / timeAll) * 100).toFixed(2)}%`);
             await sendReport("info", {progress: (100 - (timeNow / timeAll) * 100).toFixed(2)});
         }
     }
-    sendReport("info", {message: data});
+    await sendReport("info", {message: data});
 });

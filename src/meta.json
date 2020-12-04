@@ -1,6 +1,6 @@
 {
   "name": "atlas-blender-plugin",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "description": "blender",
-  "note": "add renumbered"
+  "note": "add deleting"
 }
