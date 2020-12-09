@@ -5,13 +5,22 @@ const os = require("os");
 let timeAll = 0;
 console.log(`plugin begin render task for frame ${frame}`);
 
-const script = "from datetime import datetime\nfrom bpy.app import handlers\nimport bpy.types\n" +
-    "import bpy\nimport os\nimport json\nimport sys\nimport time\n\n\nprint(bpy.context.scene.cycles.samples)\n" +
-    "\nFRAME_START_TIME = None\nRENDER_START_TIME = None\noutputDir = bpy.context.scene.render.filepath\n" +
-    "\nargv = sys.argv\nargv = argv[argv.index(\"--\") + 1:]\nframe = int(argv[0])\nbpy.context.scene.cycles.samples = int(argv[1])\n" +
-    "bpy.context.scene.render.resolution_x = int(argv[2])\nbpy.context.scene.render.resolution_y = int(argv[3])\nprint(argv[1])\n" +
-    "print(\"asd\")\nbpy.context.scene.render.filepath = \"/Projects/\" + str(argv[4]).zfill(4)\nbpy.context.scene.frame_set(int(frame))\n" +
-    "bpy.ops.render.render(write_still=True, use_viewport=True)"
+const script = "import bpy\n" +
+    "import sys\n" +
+    "\n" +
+    "FRAME_START_TIME = None\n" +
+    "RENDER_START_TIME = None\n" +
+    "outputDir = bpy.context.scene.render.filepath\n" +
+    "\n" +
+    "argv = sys.argv\n" +
+    "argv = argv[argv.index(\"--\") + 1:]\n" +
+    "frame = int(argv[0])\n" +
+    "bpy.context.scene.render.threads = int(argv[1])\n" +
+    "bpy.context.scene.render.resolution_x = int(argv[2])\n" +
+    "bpy.context.scene.render.resolution_y = int(argv[3])\n" +
+    "bpy.context.scene.render.filepath = \"/Projects/\" + str(argv[4]).zfill(4)\n" +
+    "bpy.context.scene.frame_set(int(frame))\n" +
+    "bpy.ops.render.render(write_still=True, use_viewport=True)\n"
 
 const scriptName = "Atlas-slave-temp" + Math.floor(Math.random() * (110000 - 100000) + 100000) + `.py`;
 
@@ -22,7 +31,7 @@ fs.writeFileSync(os.tmpdir() + `\\` + scriptName, script);
 const command = [
     `${env.pathToBlender.substr(0, 2)} && cd ${env.pathToBlender.substr(2)} && blender --verbose 4 ${pluginSettings.pathToBlenderScene}`,
     ` --background --python ${os.tmpdir() + `\\` + scriptName} `,
-    `-- ${+frame} ${+pluginSettings.samples} ${+pluginSettings.resolutionX} ${+pluginSettings.resolutionY} ${+renumbered}`
+    `-- ${+frame} ${+pluginSettings.threads} ${+pluginSettings.resolutionX} ${+pluginSettings.resolutionY} ${+renumbered}`
 ].join("");
 const cp = exec(command,(error, stdout, stderr) => {
         if (error) {

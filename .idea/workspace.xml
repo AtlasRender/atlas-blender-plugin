@@ -58,7 +58,7 @@
       <workItem from="1607202390652" duration="670000" />
       <workItem from="1607438969002" duration="11000" />
       <workItem from="1607442539320" duration="1229000" />
-      <workItem from="1607519999122" duration="2959000" />
+      <workItem from="1607519999122" duration="6855000" />
     </task>
     <task id="LOCAL-00001" summary="[atlas-blender-plugin] Add plugin fro blender version 0.1.1.">
       <created>1606936011993</created>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607069810204</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[atlas-blender-plugin] Add env.">
+      <created>1607526611722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607526611722</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,16 +110,17 @@
     <MESSAGE value="[atlas-blender-plugin] Add plugin fro blender version 0.1.1." />
     <MESSAGE value="[atlas-blender-plugin] Add samples, resX/Y." />
     <MESSAGE value="[atlas-blender-plugin] Add script generating, script deleting." />
-    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Add script generating, script deleting." />
+    <MESSAGE value="[atlas-blender-plugin] Add env." />
+    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Add env." />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607438975766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607438975766" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607069825230">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607526616579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607069825230" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607526616579" />
   </component>
 </project>

@@ -7,9 +7,11 @@
   },
   {
     "type": "integer",
-    "name": "samples",
-    "label": "Samples",
-    "default": 30
+    "name": "threads",
+    "label": "Set number of threads",
+    "default": 0,
+    "min": 0,
+    "max": 64
   },
   {
     "type": "integer",
