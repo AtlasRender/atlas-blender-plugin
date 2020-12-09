@@ -10,10 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="364573e2-88cb-4416-bd9b-b307d0369da7" name="Default Changelist" comment="[atlas-blender-plugin] Add samples, resX/Y.">
+    <list default="true" id="364573e2-88cb-4416-bd9b-b307d0369da7" name="Default Changelist" comment="[atlas-blender-plugin] Add script generating, script deleting.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.19.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../atlas-slave" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -52,7 +52,13 @@
       <workItem from="1606932894027" duration="1155000" />
       <workItem from="1606934197306" duration="1765000" />
       <workItem from="1607012150182" duration="7460000" />
-      <workItem from="1607062952538" duration="5570000" />
+      <workItem from="1607062952538" duration="5702000" />
+      <workItem from="1607103231962" duration="1848000" />
+      <workItem from="1607177793390" duration="2043000" />
+      <workItem from="1607202390652" duration="670000" />
+      <workItem from="1607438969002" duration="11000" />
+      <workItem from="1607442539320" duration="1229000" />
+      <workItem from="1607519999122" duration="2959000" />
     </task>
     <task id="LOCAL-00001" summary="[atlas-blender-plugin] Add plugin fro blender version 0.1.1.">
       <created>1606936011993</created>
@@ -68,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607021093323</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[atlas-blender-plugin] Add script generating, script deleting.">
+      <created>1607069810204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607069810204</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,16 +102,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[atlas-blender-plugin] Add plugin fro blender version 0.1.1." />
     <MESSAGE value="[atlas-blender-plugin] Add samples, resX/Y." />
-    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Add samples, resX/Y." />
+    <MESSAGE value="[atlas-blender-plugin] Add script generating, script deleting." />
+    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Add script generating, script deleting." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607062957337">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607438975766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607062957337" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607021097253">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607438975766" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607069825230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607021097253" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607069825230" />
   </component>
 </project>

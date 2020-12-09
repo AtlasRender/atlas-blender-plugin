@@ -20,9 +20,9 @@ console.log(scriptName);
 fs.writeFileSync(os.tmpdir() + `\\` + scriptName, script);
 
 const command = [
-    `${pathToBlender.substr(0, 2)} && cd ${pathToBlender.substr(2)} && blender --verbose 4 ${pathToBlenderScene}`,
+    `${env.pathToBlender.substr(0, 2)} && cd ${env.pathToBlender.substr(2)} && blender --verbose 4 ${pluginSettings.pathToBlenderScene}`,
     ` --background --python ${os.tmpdir() + `\\` + scriptName} `,
-    `-- ${+frame} ${+samples} ${+resolutionX} ${+resolutionY} ${+renumbered}`
+    `-- ${+frame} ${+pluginSettings.samples} ${+pluginSettings.resolutionX} ${+pluginSettings.resolutionY} ${+renumbered}`
 ].join("");
 const cp = exec(command,(error, stdout, stderr) => {
         if (error) {

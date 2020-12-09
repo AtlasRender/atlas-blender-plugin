@@ -1,27 +1,26 @@
 [
   {
     "type": "string",
-    "name": "pathToBlender",
-    "label": "Path to blender"
-  },
-  {
-    "type": "string",
     "name": "pathToBlenderScene",
-    "label": "Path to blender scene"
+    "label": "Path to blender scene",
+    "default": "D:\\Steam\\steamapps\\common\\Blender\\Projects\\bugatti\\bugatti.blend"
   },
   {
     "type": "integer",
     "name": "samples",
-    "label": "Samples"
+    "label": "Samples",
+    "default": 30
   },
   {
     "type": "integer",
     "name": "resolutionX",
-    "label": "Resolution X"
+    "label": "Resolution X",
+    "default": 1920
   },
   {
     "type": "integer",
     "name": "resolutionY",
-    "label": "Resolution Y"
+    "label": "Resolution Y",
+    "default": 1080
   }
 ]
