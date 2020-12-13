@@ -18,7 +18,7 @@ const script = "import bpy\n" +
     "bpy.context.scene.render.threads = int(argv[1])\n" +
     "bpy.context.scene.render.resolution_x = int(argv[2])\n" +
     "bpy.context.scene.render.resolution_y = int(argv[3])\n" +
-    "bpy.context.scene.render.filepath = \"/Projects/\" + str(argv[4]).zfill(4)\n" +
+    "bpy.context.scene.render.filepath = argv[5] + str(argv[4]).zfill(5)\n" +
     "bpy.context.scene.frame_set(int(frame))\n" +
     "bpy.ops.render.render(write_still=True, use_viewport=True)\n"
 

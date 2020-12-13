@@ -13,8 +13,6 @@
     <list default="true" id="364573e2-88cb-4416-bd9b-b307d0369da7" name="Default Changelist" comment="[atlas-blender-plugin] Change label for threads.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,9 @@
       <workItem from="1607442539320" duration="1229000" />
       <workItem from="1607519999122" duration="6879000" />
       <workItem from="1607877126375" duration="4031000" />
-      <workItem from="1607886948304" duration="515000" />
+      <workItem from="1607886948304" duration="548000" />
+      <workItem from="1607887808309" duration="153000" />
+      <workItem from="1607888542546" duration="544000" />
     </task>
     <task id="LOCAL-00001" summary="[atlas-blender-plugin] Add plugin fro blender version 0.1.1.">
       <created>1606936011993</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607881290753</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[atlas-blender-plugin] Adding output folder.">
+      <created>1607887491911</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607887491911</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,16 +144,17 @@
     <MESSAGE value="[atlas-blender-plugin] Add env." />
     <MESSAGE value="[atlas-blender-plugin] Change label for threads." />
     <MESSAGE value="[atlas-blender-plugin] Adding correct filepath." />
-    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Adding correct filepath." />
+    <MESSAGE value="[atlas-blender-plugin] Adding output folder." />
+    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Adding output folder." />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607881649052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607881649051" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607881824830">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607887497025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607881824830" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-119.1920.1040@0.0.1920.1040" timestamp="1607887497025" />
   </component>
 </project>
