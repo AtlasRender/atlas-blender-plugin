@@ -34,11 +34,12 @@ const pathToBlenderScene = pluginSettings.pathToBlenderScene.replace(/"/g, "\\\"
 const threads = pluginSettings.threads;
 const resolutionX =  pluginSettings.resolutionX;
 const resolutionY = pluginSettings.resolutionY;
+const outputFolder = pluginSettings.outputFolder;
 
 const command = [
     `${pathToBlender.substr(0, 2)} && cd "${pathToBlender.substr(2)}" && blender --verbose 4 "${pathToBlenderScene}"`,
     ` --background --python "${scriptFilename}" `,
-    `-- ${+frame} ${+threads} ${+resolutionX} ${+resolutionY} ${+renumbered}`
+    `-- ${+frame} ${+threads} ${+resolutionX} ${+resolutionY} ${+renumbered} ${outputFolder}`
 ].join("");
 const cp = exec(command,(error, stdout, stderr) => {
         if (error) {

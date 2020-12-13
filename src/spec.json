@@ -6,6 +6,12 @@
     "default": "D:\\Steam\\steamapps\\common\\Blender\\Projects\\bugatti\\bugatti.blend"
   },
   {
+    "type": "string",
+    "name": "outputFolder",
+    "label": "Output folder for render",
+    "default": "C:\\BlenderProjects\\"
+  },
+  {
     "type": "integer",
     "name": "threads",
     "label": "Set number of threads",
