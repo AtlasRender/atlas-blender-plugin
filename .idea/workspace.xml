@@ -13,7 +13,6 @@
     <list default="true" id="364573e2-88cb-4416-bd9b-b307d0369da7" name="Default Changelist" comment="[atlas-blender-plugin] Change label for threads.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/meta.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
       <workItem from="1607438969002" duration="11000" />
       <workItem from="1607442539320" duration="1229000" />
       <workItem from="1607519999122" duration="6879000" />
-      <workItem from="1607877126375" duration="163000" />
+      <workItem from="1607877126375" duration="3473000" />
     </task>
     <task id="LOCAL-00001" summary="[atlas-blender-plugin] Add plugin fro blender version 0.1.1.">
       <created>1606936011993</created>
@@ -96,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607532654296</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[atlas-blender-plugin] Adding correct filepath.">
+      <created>1607877312062</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607877312062</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +126,8 @@
     <MESSAGE value="[atlas-blender-plugin] Add script generating, script deleting." />
     <MESSAGE value="[atlas-blender-plugin] Add env." />
     <MESSAGE value="[atlas-blender-plugin] Change label for threads." />
-    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Change label for threads." />
+    <MESSAGE value="[atlas-blender-plugin] Adding correct filepath." />
+    <option name="LAST_COMMIT_MESSAGE" value="[atlas-blender-plugin] Adding correct filepath." />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607877128952">

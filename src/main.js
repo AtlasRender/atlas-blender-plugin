@@ -23,15 +23,22 @@ const script = "import bpy\n" +
     "bpy.ops.render.render(write_still=True, use_viewport=True)\n"
 
 const scriptName = "Atlas-slave-temp" + Math.floor(Math.random() * (110000 - 100000) + 100000) + `.py`;
+const scriptFilename = os.tmpdir() + `\\` + scriptName;
 
 console.log(scriptName);
 
 fs.writeFileSync(os.tmpdir() + `\\` + scriptName, script);
 
+const pathToBlender = env.pathToBlender.replace(/"/g, "\\\"");
+const pathToBlenderScene = pluginSettings.pathToBlenderScene.replace(/"/g, "\\\"");
+const threads = pluginSettings.threads;
+const resolutionX =  pluginSettings.resolutionX;
+const resolutionY = pluginSettings.resolutionY;
+
 const command = [
-    `${env.pathToBlender.substr(0, 2)} && cd "${env.pathToBlender.substr(2)}" && blender --verbose 4 "${pluginSettings.pathToBlenderScene}"`,
-    ` --background --python ${os.tmpdir() + `\\` + scriptName} `,
-    `-- ${+frame} ${+pluginSettings.threads} ${+pluginSettings.resolutionX} ${+pluginSettings.resolutionY} ${+renumbered}`
+    `${pathToBlender.substr(0, 2)} && cd "${pathToBlender.substr(2)}" && blender --verbose 4 "${pathToBlenderScene}"`,
+    ` --background --python "${scriptFilename}" `,
+    `-- ${+frame} ${+threads} ${+resolutionX} ${+resolutionY} ${+renumbered}`
 ].join("");
 const cp = exec(command,(error, stdout, stderr) => {
         if (error) {
