@@ -29,7 +29,7 @@ console.log(scriptName);
 fs.writeFileSync(os.tmpdir() + `\\` + scriptName, script);
 
 const command = [
-    `${env.pathToBlender.substr(0, 2)} && cd ${env.pathToBlender.substr(2)} && blender --verbose 4 ${pluginSettings.pathToBlenderScene}`,
+    `${env.pathToBlender.substr(0, 2)} && cd "${env.pathToBlender.substr(2)}" && blender --verbose 4 "${pluginSettings.pathToBlenderScene}"`,
     ` --background --python ${os.tmpdir() + `\\` + scriptName} `,
     `-- ${+frame} ${+pluginSettings.threads} ${+pluginSettings.resolutionX} ${+pluginSettings.resolutionY} ${+renumbered}`
 ].join("");

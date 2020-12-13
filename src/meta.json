@@ -1,6 +1,6 @@
 {
   "name": "atlas-blender-plugin",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "blender",
-  "note": "add deleting"
+  "note": "add correct filepath"
 }
